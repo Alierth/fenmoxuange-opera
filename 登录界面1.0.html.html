@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录注册 - 中国传统戏剧文化</title>
+    <style>
+        /* 全局样式重置与基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "SimHei", sans-serif;
+        }
+
+        /* 页面背景：适配主页的国风纹理+红金主题 */
+        body {
+            background-color: #f5e9d3;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4b886' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* 顶部导航栏：和主页完全一致的样式 */
+        .header {
+            width: 100%;
+            background-color: #9a1a1a;
+            padding: 25px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            margin-bottom: 15px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            color: #fff1d2
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #c42e2e;
+            transform: translateY(-2px);
+        }
+
+        /* 登录主容器：国风边框+红金装饰 */
+        .login-container {
+            width: 100%;
+            max-width: 480px;
+            background-color: #fff9f0;
+            border: 3px solid #9a1a1a;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(154, 26, 26, 0.3);
+            padding: 35px;
+            margin-top: 150px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 国风装饰边框（上下） */
+        .login-container::before,
+        .login-container::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='30' viewBox='0 0 100 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,15 Q25,0 50,15 T100,15' stroke='%239a1a1a' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 50px 30px;
+        }
+
+        .login-container::before {
+            top: 0;
+        }
+
+        .login-container::after {
+            bottom: 0;
+            transform: rotate(180deg);
+        }
+
+        /* 登录/注册选项卡 */
+        .tab-header {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #d4b886;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 0;
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            font-weight: bold;
+            color: #9a1a1a;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .tab-btn.active {
+            background-color: #9a1a1a;
+            color: #fff;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background-color: #f5e9d3;
+        }
+
+        /* 表单样式 */
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #7a200d;
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #d4b886;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #9a1a1a;
+            box-shadow: 0 0 0 3px rgba(154, 26, 26, 0.15);
+        }
+
+        /* 登录按钮：红金主题 */
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #9a1a1a 0%, #c42e2e 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(154, 26, 26, 0.4);
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #c42e2e 0%, #9a1a1a 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(154, 26, 26, 0.5);
+        }
+
+        /* 注册链接 */
+        .link-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 15px;
+            color: #7a200d;
+        }
+
+        .link-text a {
+            color: #9a1a1a;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .link-text a:hover {
+            color: #c42e2e;
+            text-decoration: underline;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+                letter-spacing: 4px;
+            }
+            .nav {
+                gap: 20px;
+            }
+            .nav a {
+                font-size: 16px;
+            }
+            .login-container {
+                margin-top: 180px;
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏（和主页一致） -->
+    <div class="header">
+        <h1>中国传统戏剧文化</h1>
+        <div class="nav">
+           剧目购票
+        </div>
+    </div>
+
+    <!-- 登录注册容器 -->
+    <div class="login-container">
+        <div class="tab-header">
+            <button class="tab-btn active" id="login-tab">登录</button>
+            <button class="tab-btn" id="register-tab">注册</button>
+        </div>
+
+        <!-- 登录表单 -->
+        <form id="login-form" class="form-content">
+            <div class="form-group">
+                <label for="login-username">用户名</label>
+                <input type="text" id="login-username" placeholder="请输入用户名" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">密码</label>
+                <input type="password" id="login-password" placeholder="请输入密码" required>
+            </div>
+            <button type="submit" class="submit-btn">登录</button>
+            <div class="link-text">
+                没有账号？<a onclick="switchTab('register')">去注册</a >
+            </div>
+        </form>
+
+        <!-- 注册表单（默认隐藏） -->
+        <form id="register-form" class="form-content" style="display: none;">
+            <div class="form-group">
+                <label for="reg-username">用户名</label>
+                <input type="text" id="reg-username" placeholder="请设置用户名" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-password">密码</label>
+                <input type="password" id="reg-password" placeholder="请设置密码" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-confirm">确认密码</label>
+                <input type="password" id="reg-confirm" placeholder="请再次输入密码" required>
+            </div>
+            <button type="submit" class="submit-btn">注册</button>
+            <div class="link-text">
+                已有账号？<a onclick="switchTab('login')">去登录</a >
+            </div>
+        </form>
+    </div>
+
+  <script>
+  // 获取元素
+  const loginTab = document.getElementById('login-tab');
+  const registerTab = document.getElementById('register-tab');
+  const loginForm = document.getElementById('login-form');
+  const registerForm = document.getElementById('register-form');
+
+  // 切换选项卡
+  function switchTab(type) {
+    if (type === 'login') {
+      loginTab.classList.add('active');
+      registerTab.classList.remove('active');
+      loginForm.style.display = 'block';
+      registerForm.style.display = 'none';
+    } else {
+      registerTab.classList.add('active');
+      loginTab.classList.remove('active');
+      registerForm.style.display = 'block';
+      loginForm.style.display = 'none';
+    }
+  }
+
+  // 登录提交
+  loginForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('login-username').value.trim();
+    const password = document.getElementById('login-password').value.trim();
+
+    if (!username || !password) {
+      alert('请输入用户名和密码');
+      return;
+    }
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find(item =>
+      item.username === username && item.password === password
+    );
+
+    if (!user) {
+      alert('用户名或密码错误');
+      return;
+    }
+
+    localStorage.setItem('currentUser', username);
+    alert('登录成功！即将跳转到购票页面');
+    location.href = '购票.html.html';
+  });
+
+  // 注册提交
+  registerForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('reg-username').value.trim();
+    const password = document.getElementById('reg-password').value.trim();
+    const confirm = document.getElementById('reg-confirm').value.trim();
+
+    if (!username || !password) {
+      alert('请输入用户名和密码');
+      return;
+    }
+
+    if (password !== confirm) {
+      alert('两次密码输入不一致');
+      return;
+    }
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const exists = users.some(item => item.username === username);
+
+    if (exists) {
+      alert('用户名已存在');
+      return;
+    }
+
+    users.push({ username, password });
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert('注册成功！请登录');
+    switchTab('login');
+  });
+
+  // 选项卡点击切换
+  loginTab.addEventListener('click', () => switchTab('login'));
+  registerTab.addEventListener('click', () => switchTab('register'));
+</script>
+</body>
+</html>

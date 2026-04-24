@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>脸谱不同色彩的含义 | 京剧艺术</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f5f1e9;
+            color: #333;
+            line-height: 1.8;
+        }
+        /* 顶部标题栏 */
+        .header {
+            background-color: #8b0000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #8b0000;
+            border-left: 5px solid #8b0000;
+            padding-left: 15px;
+        }
+        /* 内容板块样式 */
+        .section-block {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .section-block:nth-child(even) {
+            flex-direction: row-reverse; /* 交替排版，图片左右切换 */
+        }
+        .section-img {
+            width: 100%;
+            min-height: 420px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 6px;
+        }
+        .section-text {
+            width: 60%;
+        }
+        .section-text h3 {
+            color: #8b0000;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        /* 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            background-color: #8b0000;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #a52a2a;
+        }
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .section-block, .section-block:nth-child(even) {
+                flex-direction: column;
+            }
+            .section-img, .section-text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        京剧脸谱专题
+    </div>
+    <div class="container">
+        <h1>脸谱不同色彩的含义</h1>
+
+        <!-- 第一部分：主色调的基础含义 -->
+        <div class="section-block">
+            <div class="section-img" style="background-image: url('https://github.com/Alierth/images01/raw/main/lianpuyanse-hongbaihei.jpg');"></div>
+            <div class="section-text">
+                <h3>一、主色调的基础含义</h3>
+                <p>京剧脸谱的色彩是角色性格的“视觉语言”，观众可以通过颜色快速判断角色的善恶与特质。这些色彩约定俗成，形成了一套完整的符号体系。</p >
+                <p><strong>红色：</strong>代表忠义、耿直，典型角色如关羽。</p >
+                <p><strong>白色：</strong>代表奸诈、多疑，典型角色如曹操。</p >
+                <p><strong>黑色：</strong>代表刚直、勇猛，典型角色如包拯、张飞。</p >
+            </div>
+        </div>
+
+        <!-- 第二部分：其他色彩的象征意义 -->
+        <div class="section-block">
+            <div class="section-img" style="background-image: url('https://github.com/Alierth/images01/raw/main/lianpuyanse-lanhuangzilv.jpg');"></div>
+            <div class="section-text">
+                <h3>二、其他色彩的象征意义</h3>
+                <p>除了红、白、黑三大主色，脸谱中还有许多其他颜色，各自代表不同的角色特质。</p >
+                <p><strong>蓝色：</strong>代表勇猛、桀骜不驯，典型角色如窦尔敦。</p >
+                <p><strong>黄色：</strong>代表枭勇、残暴，典型角色如典韦。</p >
+                <p><strong>紫色：</strong>代表刚正、沉稳，典型角色如徐延昭。</p >
+                <p><strong>绿色：</strong>代表勇猛、莽撞，典型角色如青面虎。</p >
+            </div>
+        </div>
+
+        <!-- 第三部分：色彩组合与角色塑造 -->
+        <div class="section-block">
+            <div class="section-img" style="background-image: url('https://github.com/Alierth/images01/raw/main/lianpusecaihanyi.jpg');"></div>
+            <div class="section-text">
+                <h3>三、色彩组合与角色塑造</h3>
+                <p>许多复杂角色的脸谱并非单一颜色，而是通过多种色彩的组合，展现角色多面的性格。比如红脸加黑纹，既表现忠义，也体现勇猛；白脸加黑纹，既表现奸诈，也暗示凶狠。</p >
+                <p>这种色彩组合，让脸谱的表现力更加丰富，也体现了京剧艺术“以形传神”的美学思想。观众通过色彩的搭配，就能读懂角色的复杂性格，感受传统戏曲的独特魅力。</p >
+            </div>
+        </div>
+       <a href="index.html.html" target="_blank" class="video-btn">返回首页</a>
+    </div>
+</body>
+</html>

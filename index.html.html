@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国传统戏剧文化 - 京剧艺术</title>
+   <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <div class="logo">
+                    <i class="fas fa-theater-masks"></i>
+                    <div class="logo-text">中国传统戏剧文化</div>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="#history"><i class="fas fa-history"></i> 发展历程</a></li>
+                    <li><a href="#features"><i class="fas fa-paint-brush"></i> 表现手法</a></li>
+                    <li><a href="#roles"><i class="fas fa-user-friends"></i> 行当分类</a></li>
+                    <li><a href="#dramas"><i class="fas fa-book-open"></i> 剧目介绍</a></li>
+                    <li><a href="#actors"><i class="fas fa-star"></i> 演员风采</a></li>
+                     <li><a href="#tickets"><i class="fas fa-tickets"></i> 剧目购票</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner区域 -->
+    <!-- 京剧脸谱三栏模块 -->
+<section class="face-section">
+    <div class="face-container">
+        <!-- 1. 脸谱的艺术概述 -->
+        <div class="face-card">
+            <a href="脸谱的艺术概论.html.html " target="_blank">
+                <div class="card-text">
+                    <p>脸谱的<br>艺术概述</p >
+                </div>
+                <div class="card-img overview-img"></div>
+            </a >
+        </div>
+
+        <!-- 2. 脸谱的绘制技法 -->
+        <div class="face-card">
+            <a href="脸谱的绘制技法.html.html" target="_blank">
+                <div class="card-text">
+                    <p>脸谱的<br>绘制技法</p >
+                </div>
+                <div class="card-img paint-img"></div>
+            </a >
+        </div>
+
+        <!-- 3. 脸谱不同色彩的含义 -->
+        <div class="face-card">
+            <a href="脸谱不同色彩含义.html.html" target="_blank">
+                <div class="card-text">
+                    <p>脸谱不同<br>色彩的含义</p >
+                </div>
+                <div class="card-img color-img"></div>
+            </a >
+        </div>
+    </div>
+</section>
+
+<style>
+/* 模块整体样式 */
+.face-section {
+    width: 100%;
+    background-color: #f5f1e9; /* 米底色，和示例呼应 */
+    padding: 40px 0;
+}
+
+.face-container {
+    display: flex;
+    justify-content: center;
+    gap: 0; /* 卡片之间无缝衔接 */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 卡片通用样式 */
+.face-card {
+    flex: 1;
+    height: 400px; /* 统一高度 */
+    overflow: hidden;
+    position: relative;
+}
+
+.face-card a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 文字区域 */
+.card-text {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(139, 0, 0, 0.8); /* 京剧红底色 */
+    padding: 20px;
+}
+
+.card-text p {
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* 图片区域 */
+.card-img {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    width: 60%;
+            min-height: 300px;
+} 
+
+/* 给每个卡片设置不同的背景图 */
+.overview-img {
+    background-image: url("https://github.com/Alierth/images01/raw/main/lianpuyishugaishu.jpg"); 
+}
+
+.paint-img {
+    background-image: url("https://github.com/Alierth/images01/raw/main/lianpuhuizhijishu.jpg"); 
+}
+
+.color-img {
+    background-image: url("https://github.com/Alierth/images01/raw/main/lianpusecaihanyi.jpg"); 
+}
+
+/* 悬停效果 */
+.face-card:hover .card-img {
+    transform: scale(1.05);
+}
+
+
+</style>
+</section>
+    <!-- 发展历程 -->
+    <section class="section" id="history">
+        <div class="container">
+            <h2 class="section-title">京剧发展历程</h2>
+            <div class="history-container">
+                <div class="history-text">
+                    <h3>京剧历史与文化</h3>
+                    <p>京剧是中华民族的瑰宝，融合了中国各地的戏曲艺术元素，是中国传统文化的重要符号。其服饰、脸谱、道具等，都蕴含着丰富的文化意义，展现了中华文化的博大精深。</p>
+                    <p>京剧起源于清代，由四大徽班进京后与汉调等融合而成，已有二百多年历史。它见证了中国戏曲艺术的演变和发展，是中华民族传统文化的重要组成部分。</p>
+                    <p>京剧在发展过程中不断吸收其他戏曲剧种的优点，形成了独特的表演体系。如今，京剧已成为中国乃至世界的文化遗产，深受人们喜爱。</p>
+                </div>
+                
+                <div class="timeline">
+                    <h3>发展历程</h3>
+                    <div class="timeline-item">
+                        <h4>起源期 (1790年前后)</h4>
+                        <p>四大徽班（三庆、四喜、春台、和春）进京，与汉调艺人合作，吸收昆曲、秦腔等元素。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>形成期 (1840-1860)</h4>
+                        <p>融合徽调、汉调、昆曲、秦腔等，形成京剧雏形，确立基本表演形式。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>成熟期 (1860-1911)</h4>
+                        <p>表演艺术日臻成熟，出现"同光十三绝"，行当分工明确，唱腔体系完善。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>鼎盛期 (20世纪20-40年代)</h4>
+                        <p>以梅兰芳为代表的"四大名旦"将京剧推向高峰，流派纷呈，影响深远。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>现代发展 (1949至今)</h4>
+                        <p>2006年被列入国家级非物质文化遗产，2010年入选联合国人类非物质文化遗产代表作名录。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 艺术特点 -->
+    <section class="section" id="features" style="background: rgba(233, 214, 182, 0.2);">
+        <div class="container">
+            <h2 class="section-title">京剧艺术特点</h2>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-a-header"></div>
+                    <div class="feature-content">
+                        <h4>综合性</h4>
+                        <p>京剧是一种高度综合的艺术形式，融合了文学、表演、音乐、舞台美术等多个方面，形成了一系列规范化的艺术表现形式。</p>
+                        <p>京剧的唱腔属于板式变化体，主要声腔包括二簧和西皮。京剧的伴奏分为文场和武场两大类，文场以京胡为主要乐器，武场则以打击乐伴奏为主（如鼓板、大锣、铙钹、小锣）。</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-b-header"></div>
+                    <div class="feature-content">
+                        <h4>虚拟性</h4>
+                        <p>京剧通过虚拟化的表演手法，以象征性、程式化的动作，来表现现实生活中难以在舞台上展现的场景，这使得戏剧具有更深层次的艺术表现力。</p>
+                        <p>例如，演员通过简单的动作表现开门、上楼、骑马等场景，通过挥舞马鞭表现骑马，通过划桨动作表现行船。</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-c-header"></div>
+                    <div class="feature-content">
+                        <h4>程序化</h4>
+                        <p>京剧的表演有着严格的程式化要求，角色的动作、唱腔、化妆等都遵循一定的规范。例如，京剧的角色分为生、旦、净、丑四种行当，每种行当都有其独特的表演形式和技巧。</p>
+                        <p>程式化表演包括唱念做打四个方面，每个方面都有严格的规范和标准，形成了一套完整的表演体系。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行当分类 -->
+    <section class="section" id="roles">
+        <div class="container">
+            <h2 class="section-title">京剧行当分类</h2>
+            
+            <div class="role-types">
+                <div class="role-card role-sheng">
+                    <div class="role-header">生角</div>
+                    <div class="role-content">
+                        <h4>男性正面角色</h4>
+                        <p>除了花脸以及丑角以外的男性正面角色</p>
+                        <ul>
+                            <li><strong>老生</strong>：中年以上男性，戴髯口</li>
+                            <li><strong>小生</strong>：青年男性，不戴髯口</li>
+                            <li><strong>武生</strong>：擅长武艺的男性角色</li>
+                            <li><strong>红生</strong>：勾红脸的老生角色</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="role-card role-dan">
+                    <div class="role-header">旦角</div>
+                    <div class="role-content">
+                        <h4>女性角色</h4>
+                        <p>扮演不同年龄、身份、性格的女性角色</p>
+                        <ul>
+                            <li><strong>青衣</strong>：端庄稳重的正派女性</li>
+                            <li><strong>花旦</strong>：活泼开朗的年轻女性</li>
+                            <li><strong>武旦</strong>：精通武艺的女性角色</li>
+                            <li><strong>老旦</strong>：老年女性角色</li>
+                            <li><strong>彩旦</strong>：滑稽诙谐的女性角色</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="role-card role-jing">
+                    <div class="role-header">净角</div>
+                    <div class="role-content">
+                        <h4>花脸角色</h4>
+                        <p>性格鲜明、相貌特异的男性角色</p>
+                        <ul>
+                            <li><strong>正净</strong>：重唱功，如包拯</li>
+                            <li><strong>副净</strong>：重工架，如张飞</li>
+                            <li><strong>武净</strong>：以武打为主的花脸</li>
+                            <li><strong>毛净</strong>：扮演神怪角色</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="role-card role-chou">
+                    <div class="role-header">丑角</div>
+                    <div class="role-content">
+                        <h4>喜剧角色</h4>
+                        <p>鼻梁上抹白粉的喜剧角色</p>
+                        <ul>
+                            <li><strong>文丑</strong>：文人、官吏等角色</li>
+                            <li><strong>武丑</strong>：精通武艺的滑稽角色</li>
+                            <li><strong>方巾丑</strong>：书呆子类角色</li>
+                            <li><strong>茶衣丑</strong>：普通劳动人民</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 剧目介绍 -->
+    <section class="section" id="dramas" style="background: rgba(139, 0, 0, 0.05);">
+        <div class="container">
+            <h2 class="section-title">经典剧目介绍</h2>
+            
+            <div class="dramas">
+                <div class="drama-card">
+                    <div class="drama-img" style="background-image: url(https://github.com/Alierth/images01/raw/main/bawangbieji.jpg);"></div>
+                    <div class="drama-content">
+                        <h3>霸王别姬</h3>
+                        <p>讲述秦末楚汉相争，西楚霸王项羽被困垓下，与爱妃虞姬生死离别的故事。其中"虞姬舞剑"成为经典片段。</p>
+                </div>
+                    </div>
+                </div>
+                
+                <div class="drama-card">
+                    <div class="drama-img" style="background-image: url(https://github.com/Alierth/images01/raw/main/baishezhuan.webp);"></div>
+                    <div class="drama-content">
+                        <h3>白蛇传</h3>
+                        <p>千年白蛇白素贞与凡人许仙的爱情故事。其中"断桥相会"、"水漫金山"等成为经典折子戏。</p>
+                    </div>
+                </div>
+                
+                <div class="drama-card">
+                    <div class="drama-img" style="background-image: url(https://github.com/Alierth/images01/raw/main/guifeizuijiu.webp);"></div>
+                    <div class="drama-content">
+                        <h3>贵妃醉酒</h3>
+                        <p>唐玄宗宠妃杨玉环在百花亭设宴，却因皇帝转驾西宫而失落独饮，借酒消愁的故事。梅派代表剧目。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 演员风采 -->
+    <section class="section" id="actors">
+        <div class="container">
+            <h2 class="section-title">京剧四大名旦</h2>
+            
+            <div class="actors">
+                <div class="actor-card">
+                    <div class="actor-img" style="background-image: url(https://github.com/Alierth/images01/raw/main/meilanfang.jpg);"></div>
+                    <div class="actor-name">梅兰芳<br>梅兰芳在50余年的舞台生活中，发展和提高了京剧旦角的演唱和表演艺术，形成一个具有独特风格的艺术流派，世称“梅派”。其代表作有《贵妃醉酒》《天女散花》《宇宙锋》《打渔杀家》等</div>
+                </div>
+                
+                <div class="actor-card">
+                    <div class="actor-img" style="background-image: url(https://github.com/Alierth/images01/raw/main/shangxiaoyuan.png);"></div>
+                    <div class="actor-name">尚小云<br>尚小云的唱腔字正腔圆，刚劲高亢，念白爽朗明快，流丽大方，韵白字清音朗，富于感情，做功刚健又婀娜，塑造了一系列巾帼英雄、侠女烈妇的形象，独树一帜，世称“尚派” </div>
+                </div>
+                
+                <div class="actor-card">
+                    <div class="actor-img" style="background-image: url(https://github.com/Alierth/images01/raw/main/chengyanqiu.jpg);"></div>
+                    <div class="actor-name">程砚秋<br>程砚秋是京剧程派艺术的创始人。他严守音韵规律，唱腔起伏跌宕，节奏多变，同时注重贴近生活的真实性。根据自己独有的嗓音特点，创造出了一种幽咽婉转、若断若续的唱腔风格</div>
+                </div>
+                
+                <div class="actor-card">
+                    <div class="actor-img" style="background-image: url(https://github.com/Alierth/images01/raw/main/xunhuisheng.jpg);"></div>
+                    <div class="actor-name">荀慧生<br>荀派创始人，他大胆破除传统局限，发挥个人嗓音特长，吸取昆、梆、汉、川等曲调旋律，大胆创新，塑造的许多少女、少妇的艺术形象。代表作品有《投军别窑》《红娘》《金玉奴》</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- 剧目购票 -->
+    <section class="section" id="tickets">
+    <title>经典京剧剧目购票</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f9f4e8;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="#e8dcc0" stroke-width="1"/></svg>');
+            background-size: 50px 50px;
+            padding: 20px;
+        }
+        .page-title {
+            text-align: center;
+            color: #9a2018;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .page-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #f5c566, #e8a847);
+            margin: 8px auto 0;
+        }
+        .drama-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+        .drama-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .drama-card:hover {
+            transform: translateY(-5px);
+        }
+        .drama-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+        .drama-info {
+            padding: 25px;
+        }
+        .drama-name {
+            color: #9a2018;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .drama-desc {
+            color: #5c3d24;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .booking-info {
+            border-top: 1px solid #e8dcc0;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            color: #5c3d24;
+            font-size: 0.9rem;
+        }
+        .price {
+            color: #9a2018;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .booking-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #9a2018, #b83227);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+        .booking-btn:hover {
+            background: linear-gradient(90deg, #b83227, #d63031);
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="page-title">剧目购票</h1>
+    <div class="drama-container">
+
+        <!-- 霸王别姬 -->
+        <div class="drama-card">
+            <div class="drama-info">
+                <h2 class="drama-name">霸王别姬</h2>
+                <p class="drama-desc">
+                    讲述秦末楚汉相争，西楚霸王项羽被困垓下，与爱妃虞姬生死离别的故事。其中"虞姬舞剑"成为经典片段。
+                </p >
+                <div class="booking-info">
+                    <div class="info-row">
+                        <span>演出时间：</span>
+                        <span>2026年3月20日 19:30</span>
+                    </div>
+                    <div class="info-row">
+                        <span>演出地点：</span>
+                        <span>国家京剧院大剧院</span>
+                    </div>
+                    <div class="info-row">
+                        <span>票价：</span>
+                        <span class="price">¥180 / ¥280 / ¥380 / ¥580</span>
+                    </div>
+                </div>
+                <button class="booking-btn" onclick="location.href='登录界面1.0.html.html'">立即购票</button>
+            </div>
+        </div>
+
+        <!-- 白蛇传 -->
+        <div class="drama-card">
+            <div class="drama-info">
+                <h2 class="drama-name">白蛇传</h2>
+                <p class="drama-desc">
+                    千年白蛇白素贞与凡人许仙的爱情故事。其中"断桥相会"、"水漫金山"等成为经典折子戏。
+                </p >
+                <div class="booking-info">
+                    <div class="info-row">
+                        <span>演出时间：</span>
+                        <span>2026年3月22日 19:30</span>
+                    </div>
+                    <div class="info-row">
+                        <span>演出地点：</span>
+                        <span>国家京剧院大剧院</span>
+                    </div>
+                    <div class="info-row">
+                        <span>票价：</span>
+                        <span class="price">¥160 / ¥260 / ¥360 / ¥520</span>
+                    </div>
+                </div>
+                <button class="booking-btn" onclick="location.href='登录界面1.0.html.html'">立即购票</button>
+            </div>
+        </div>
+
+        <!-- 贵妃醉酒 -->
+        <div class="drama-card">
+            <div class="drama-info">
+                <h2 class="drama-name">贵妃醉酒</h2>
+                <p class="drama-desc">
+                    唐玄宗宠妃杨玉环在百花亭设宴，却因皇帝转驾西宫而失落独饮，借酒消愁的故事。梅派代表剧目。
+                </p >
+                <div class="booking-info">
+                    <div class="info-row">
+                        <span>演出时间：</span>
+                        <span>2026年3月22日 19:30</span>
+                    </div>
+                    <div class="info-row">
+                        <span>演出地点：</span>
+                        <span>国家京剧院大剧院</span>
+                    </div>
+                    <div class="info-row">
+                        <span>票价：</span>
+                        <span class="price">¥160 / ¥260 / ¥360 / ¥520</span>
+                    </div>
+                </div>
+                <button class="booking-btn" onclick="location.href='登录界面1.0.html.html'">立即购票</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>中国传统戏剧文化</h3>
+                    <p>传承中华优秀传统文化，弘扬京剧艺术精髓</p>
+                </div>
+            </div>   
+        </div>
+    </footer>
+</body>
+</html>
